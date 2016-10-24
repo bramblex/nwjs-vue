@@ -70,6 +70,7 @@ webpack(webpackConfig, function (err, stats) {
         cp('-r', `node_modules/${p}`, 'tmp/build/node_modules/')
     })
     const nwconfig = require('./nwbuild').build
+
     const nw = new NwBuilder(nwconfig)
     nw.on('log', console.log)
     yield nw.build()

@@ -1,8 +1,8 @@
 var path = require('path')
 var config = require('../config')
 var utils = require('./utils')
-var nodeExternals = require('webpack-node-externals')
 var projectRoot = path.resolve(__dirname, '../')
+const nodeExternals = require('webpack-node-externals')
 
 var env = process.env.NODE_ENV
 // check env & config/index.js to decide weither to enable CSS Sourcemaps for the
@@ -12,13 +12,13 @@ var cssSourceMapProd = (env === 'production' && config.build.productionSourceMap
 var useCssSourceMap = cssSourceMapDev || cssSourceMapProd
 
 module.exports = {
+  target: 'node-webkit',
+  externals: [nodeExternals({
+    whitelist: [/^webpack-.*$/].concat(require('../config/vue-packages'))
+  })],
   entry: {
     app: './src/main.js'
   },
-  target: 'node-webkit',
-  externals: [nodeExternals({
-    whitelist: [/^webpack.*$/].concat(require('../config/vue-packages'))
-  })],
   output: {
     path: config.build.assetsRoot,
     publicPath: process.env.NODE_ENV === 'production' ? config.build.assetsPublicPath : config.dev.assetsPublicPath,
