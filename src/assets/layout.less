@@ -1,0 +1,24 @@
+
+@client-height: 600px;
+@client-width: 500px;
+
+@header-width: @client-width;
+@header-height: 24px;
+@header-padding: 8px;
+@header-font-size: @header-height/1.5;
+@header-button-size: @header-height/1.5;
+@header-button-margin:3px;
+@header-right-width: (@header-button-size + @header-button-margin) * 4;
+@header-left-width: @header-width - @header-right-width - (2 * @header-padding);
+
+
+@slider-width: 24px;
+@slider-height: @content-height;
+@slider-font-size: @slider-width/1.5;
+@slider-button-padding: 6px;
+
+@content-height: @client-height - @header-height;
+@content-width: @client-width - @slider-width;
+
+@content-margin-horizontal: 8px;
+@content-margin-vertical: 10px;

@@ -10,9 +10,11 @@
   },
   "dependencies": {
     "co": "^4.6.0",
+    "element-ui": "next",
     "lodash": "^4.16.4",
     "mz": "^2.4.0",
-    "vue": "^2.0.1"
+    "vue": "^2.0.1",
+    "vue-router": "^2.0.1"
   },
   "devDependencies": {
     "autoprefixer": "^6.4.0",
@@ -32,6 +34,8 @@
     "html-webpack-plugin": "^2.8.1",
     "http-proxy-middleware": "^0.17.2",
     "json-loader": "^0.5.4",
+    "less": "^2.7.1",
+    "less-loader": "^2.2.3",
     "nw-builder": "^3.1.2",
     "nwbuild": "^0.0.5",
     "opn": "^4.0.2",

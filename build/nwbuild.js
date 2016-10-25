@@ -6,6 +6,7 @@ const _ = require('lodash')
 const build = {
   files: './tmp/build/**',
   // version: 'last',
+  version: '0.18.2',
   platforms: ['osx64', 'win32'], // win32, win64, osx32, osx64, linux32, linux64
   flavor: 'normal', // 'sdk', 'normal', 'flavor', 'nacl'
 
