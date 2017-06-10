@@ -1,7 +1,6 @@
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
-    <h2> 这里是测试 </h2>
     <h2>Essential Links</h2>
     <ul>
       <li><a href="https://vuejs.org" target="_blank">Core Docs</a></li>
@@ -22,24 +21,14 @@
 </template>
 
 <script>
-  export default {
-    name: 'hello',
-    data () {
-      return {
-        msg: 'Welcome to Your Vue.js App'
-      }
-    },
-    created () {
-      const _ = require('lodash')
-      const fs = require('mz/fs')
-      const co = require('co')
-      const _this = this
-      co(function* (){
-        const files = yield fs.readdir('.')
-        _this.msg = files.join(', ')
-      })
+export default {
+  name: 'hello',
+  data () {
+    return {
+      msg: 'Welcome to Your Vue.js App'
     }
   }
+}
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->

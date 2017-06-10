@@ -1,25 +1,21 @@
-// default nwbuild config
-"use strict"
-
-const _ = require('lodash')
+'use strict'
 
 const build = {
   files: './tmp/build/**',
-  // version: 'last',
-  version: '0.18.2',
+  version: 'latest',
   platforms: ['osx64', 'win32'], // win32, win64, osx32, osx64, linux32, linux64
   flavor: 'normal', // 'sdk', 'normal', 'flavor', 'nacl'
 
   buildType: 'versioned',
   buildDir: 'packages',
 
-  zip: true
+  zip: 'true'
 }
 
-const dev = _.merge(_.clone(build) , {
+const dev = Object.assign({}, build, {
   files: './tmp/dev/**',
   flavor: 'sdk',
-  argv: ['--load-extension=build/vue-devtools']
+  argv: ['--load-extension=vue-devtools/shells/chrome']
 })
 
 module.exports = {build, dev}

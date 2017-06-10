@@ -1,6 +1,14 @@
 {
-  "plugins": [
-    "transform-es2015-modules-commonjs"
+  "presets": [
+    ["env", { "modules": false }],
+    "stage-2"
   ],
-  "comments": false
+  "plugins": ["transform-runtime"],
+  "comments": false,
+  "env": {
+    "test": {
+      "presets": ["env", "stage-2"],
+      "plugins": [ "istanbul" ]
+    }
+  }
 }

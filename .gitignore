@@ -1,8 +1,11 @@
 .DS_Store
-.idea/
 node_modules/
 dist/
-npm-debug.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
 tmp/
 cache/
 packages/
+vue-devtools/
